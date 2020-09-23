@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting | {{meeting_id}}</title>
+    <script src='https://meet.jit.si/external_api.js'></script>
+
+</head>
+
+<body>
+
+    <div id="jitsi-container" style="width: 100%;min-height:100%;">
+
+    </div>
+    <input type="hidden" name="meet_id" id="meet_id" value="{{meeting_id}}">
+    <script>
+        var roomName = document.getElementById('meet_id').value;
+        if (roomName.length == 0 || roomName == "") {
+            document.getElementById('meet_create_container').style.display = "block";
+        }
+        var button = document.querySelector('#start');
+        var container = document.querySelector('#jitsi-container');
+        var api = null;
+
+        var domain = "meet.jit.si";
+        var options = {
+            "roomName": roomName,
+            "parentNode": container,
+            "height": window.screen.availHeight - 100
+        };
+        api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+</body>
+
+</html>
