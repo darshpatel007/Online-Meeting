@@ -1,4 +1,4 @@
-# Online-Meeting
+# Online-Meeting Using Jitsi
 
 This Repository Contains Code For Online Meeting Platform Called "Jitsi".
 
