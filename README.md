@@ -1,6 +1,6 @@
 # Online-Meeting
 
-This Repository Contains Code For Online Meeting Platform Using "Jitsi" Developed In Python [Flask].
+This Repository Contains Code For Online Meeting Platform Called "Jitsi".
 
 1) Download The Repository.
 2) Get Into Downloaded Repository.
